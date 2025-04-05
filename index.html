@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/output.css">
+    <!-- icones links -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/js/script.js" defer></script>
+    <title>CodeZenAshish</title>
+</head>
+
+<body class="overflow-x-hidden text-white font-display ">
+
+    <div id="root" class="relative">
+        <!-- Your existing website content goes here -->
+
+        <!-- header -->
+
+        <header
+            class="fixed top-0 left-0 w-full z-50 bg-gray-900/95 backdrop-blur-md md:bg-transparent md:backdrop-blur-none">
+            <div class="md:fixed md:top-4 md:left-1/2 md:transform md:-translate-x-1/2 w-full md:w-auto">
+                <div
+                    class="p-[2px] md:rounded-full bg-gradient-to-r from-emerald-400 via-cyan-500 to-indigo-500 animate-gradient-x">
+                    <nav class="bg-gray-900/90 backdrop-blur-md md:rounded-full px-4 md:px-6 py-2.5">
+                        <div class="flex justify-between items-center md:hidden px-2"><a class="text-white font-bold"
+                                href="/" data-discover="true">Portfolio</a>
+                            <button id="menuButton" class="text-white p-2">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                                    height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- hover sound -->
+                        <audio id="hoverSound" src="/path/to/your/hover.mp3"></audio>
+                        <!--  -->
+                        <div id="mainMenu" class="hidden md:block">
+                            <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-1 lg:gap-2 py-4 md:py-0">
+                                <a class="nav-item px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium
+                          transition-all duration-300 flex items-center gap-2
+                          hover:bg-white/10 
+                          bg-white/15 text-white
+                         " href="/" data-discover="true">
+                                    <i class="fa-solid fa-house text-xs"></i> <span class="inline">Home</span></a>
+
+                                <a class="nav-item px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium
+                          transition-all duration-300 flex items-center gap-2
+                          hover:bg-white/10 
+                          text-gray-300 hover:text-white
+                        " href="/pages/skills.html" data-discover="true">
+                                    <i class="fa-solid fa-code text-xs"></i><span class="inline">Skills</span></a>
+
+                                <a class="nav-item px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium
+                          transition-all duration-300 flex items-center gap-2
+                          hover:bg-white/10 
+                          text-gray-300 hover:text-white
+                        " href="/pages/about.html" data-discover="true">
+                                    <i class="fa-solid fa-address-card text-xs"></i><span
+                                        class="inline">About</span></a>
+
+
+                                <a class="nav-item px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium
+                          transition-all duration-300 flex items-center gap-2
+                          hover:bg-white/10 
+                          text-gray-300 hover:text-white
+                        " href="/projects" data-discover="true">
+                                    <i class="fa-solid fa-laptop-code text-xs"></i><span
+                                        class="inline">Projects</span></a>
+
+                                <a class="nav-item px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium
+                          transition-all duration-300 flex items-center gap-2
+                          hover:bg-white/10 
+                          text-gray-300 hover:text-white
+                        " href="/pages/contect.html" data-discover="true">
+                                    <i class="fa-solid fa-envelope text-xs"></i><span class="inline">Contact</span></a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <style>
+                @keyframes gradient-x {
+
+                    0%,
+                    100% {
+                        background-position: 0% 50%;
+                    }
+
+                    50% {
+                        background-position: 100% 50%;
+                    }
+                }
+
+                .animate-gradient-x {
+                    animation: gradient-x 3s linear infinite;
+                    background-size: 200% 200%;
+                }
+            </style>
+        </header>
+
+        <!-- main hero -->
+        <main
+            class="pt-20 lg:pt-[0rem] bg-gradient-to-b from-[#020617] via-[#0a0f1f] to-[#000D1A]/90 text-white min-h-screen">
+            <section class="hero min-h-screen flex items-center relative px-4 sm:px-6 lg:px-8">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/50"></div>
+                <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div class="relative w-full h-full">
+                        <div
+                            class="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]">
+                            <div class="absolute inset-0 grid grid-cols-[repeat(40,1fr)] opacity-20">
+                                <div class="relative h-full w-full border-r border-blue-500/10"
+                                    style="animation: 2.10258s ease-in-out 0.664103s infinite normal none running gridPulse;">
+                                </div>
+
+                                <div class="relative h-full w-full border-r border-blue-500/10"
+                                    style="animation: 3.43007s ease-in-out 0.863348s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative h-full w-full border-r border-blue-500/10"
+                                    style="animation: 3.14489s ease-in-out 0.368622s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative h-full w-full border-r border-blue-500/10"
+                                    style="animation: 3.33565s ease-in-out 1.00323s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative h-full w-full border-r border-blue-500/10"
+                                    style="animation: 2.00461s ease-in-out 0.459082s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative h-full w-full border-r border-blue-500/10"
+                                    style="animation: 2.88042s ease-in-out 1.70577s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative h-full w-full border-r border-blue-500/10"
+                                    style="animation: 3.59976s ease-in-out 0.0139668s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative h-full w-full border-r border-blue-500/10"
+                                    style="animation: 3.0252s ease-in-out 1.44768s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative h-full w-full border-r border-blue-500/10"
+                                    style="animation: 3.16751s ease-in-out 0.127214s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative h-full w-full border-r border-blue-500/10"
+                                    style="animation: 3.06172s ease-in-out 1.80267s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative h-full w-full border-r border-blue-500/10"
+                                    style="animation: 3.99492s ease-in-out 0.692248s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative h-full w-full border-r border-blue-500/10"
+                                    style="animation: 2.67143s ease-in-out 1.97414s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative h-full w-full border-r border-blue-500/10"
+                                    style="animation: 2.16971s ease-in-out 1.1833s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative h-full w-full border-r border-blue-500/10"
+                                    style="animation: 2.30894s ease-in-out 1.85325s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative h-full w-full border-r border-blue-500/10"
+                                    style="animation: 3.6801s ease-in-out 1.94874s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative h-full w-full border-r border-blue-500/10"
+                                    style="animation: 3.7658s ease-in-out 0.114314s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative h-full w-full border-r border-blue-500/10"
+                                    style="animation: 3.36233s ease-in-out 0.396557s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative h-full w-full border-r border-blue-500/10"
+                                    style="animation: 3.32621s ease-in-out 0.267592s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative h-full w-full border-r border-blue-500/10"
+                                    style="animation: 3.4959s ease-in-out 0.912035s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative h-full w-full border-r border-blue-500/10"
+                                    style="animation: 3.84028s ease-in-out 1.34149s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative h-full w-full border-r border-blue-500/10"
+                                    style="animation: 2.11486s ease-in-out 0.182885s infinite normal none running gridPulse;">
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 grid grid-rows-[repeat(40,1fr)] opacity-20">
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.98678s ease-in-out 1.2033s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.09388s ease-in-out 0.594182s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.11569s ease-in-out 0.160782s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 2.44651s ease-in-out 1.15982s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.47327s ease-in-out 0.643497s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.93383s ease-in-out 1.79638s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 2.12514s ease-in-out 0.481205s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.88411s ease-in-out 1.35528s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.8973s ease-in-out 0.181727s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.35051s ease-in-out 1.0474s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.66963s ease-in-out 0.724361s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 2.79511s ease-in-out 1.94088s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 2.28697s ease-in-out 0.315015s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.81939s ease-in-out 0.374803s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.55416s ease-in-out 0.653475s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 2.63928s ease-in-out 0.161557s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 2.54219s ease-in-out 0.0229975s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.30875s ease-in-out 0.625694s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 2.3422s ease-in-out 1.19624s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 2.92411s ease-in-out 1.19907s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 2.4443s ease-in-out 0.589581s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 2.50734s ease-in-out 0.021405s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 2.00433s ease-in-out 1.15294s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.46158s ease-in-out 1.07133s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.88819s ease-in-out 1.71649s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.01918s ease-in-out 1.54132s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.4029s ease-in-out 0.821801s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 2.5354s ease-in-out 1.80964s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.4119s ease-in-out 0.93484s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 2.62236s ease-in-out 0.745825s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.21255s ease-in-out 1.80876s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 2.99673s ease-in-out 0.476092s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.81765s ease-in-out 1.66613s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.82623s ease-in-out 1.6469s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.91105s ease-in-out 1.55164s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 3.12435s ease-in-out 0.390942s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 2.91729s ease-in-out 1.37091s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 2.62551s ease-in-out 1.49327s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 2.11323s ease-in-out 1.48507s infinite normal none running gridPulse;">
+                                </div>
+                                <div class="relative w-full h-full border-b border-blue-500/10"
+                                    style="animation: 2.27814s ease-in-out 1.50737s infinite normal none running gridPulse;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-0 overflow-hidden pointer-events-none"><span
+                        class="pointer-events-none absolute left-1/2 top-1/2 size-0.5 rotate-[215deg] animate-meteor rounded-full bg-slate-500 shadow-[0_0_0_1px_#ffffff10]"
+                        style="top: -5px; left: 757px; animation-delay: 1.03396s; animation-duration: 2s;">
+                        <div
+                            class="pointer-events-none absolute top-1/2 -z-10 h-px w-[50px] -translate-y-1/2 bg-gradient-to-r from-slate-500 to-transparent">
+                        </div>
+                    </span>
+                    <span
+                        class="pointer-events-none absolute left-1/2 top-1/2 size-0.5 rotate-[215deg] animate-meteor rounded-full bg-slate-500 shadow-[0_0_0_1px_#ffffff10]"
+                        style="top: -5px; left: 1449px; animation-delay: 0.853433s; animation-duration: 9s;">
+                        <div
+                            class="pointer-events-none absolute top-1/2 -z-10 h-px w-[50px] -translate-y-1/2 bg-gradient-to-r from-slate-500 to-transparent">
+                        </div>
+                    </span><span
+                        class="pointer-events-none absolute left-1/2 top-1/2 size-0.5 rotate-[215deg] animate-meteor rounded-full bg-slate-500 shadow-[0_0_0_1px_#ffffff10]"
+                        style="top: -5px; left: 1433px; animation-delay: 0.358446s; animation-duration: 3s;">
+                        <div
+                            class="pointer-events-none absolute top-1/2 -z-10 h-px w-[50px] -translate-y-1/2 bg-gradient-to-r from-slate-500 to-transparent">
+                        </div>
+                    </span>
+                    <span
+                        class="pointer-events-none absolute left-1/2 top-1/2 size-0.5 rotate-[215deg] animate-meteor rounded-full bg-slate-500 shadow-[0_0_0_1px_#ffffff10]"
+                        style="top: -5px; left: 177px; animation-delay: 1.17989s; animation-duration: 8s;">
+                        <div
+                            class="pointer-events-none absolute top-1/2 -z-10 h-px w-[50px] -translate-y-1/2 bg-gradient-to-r from-slate-500 to-transparent">
+                        </div>
+                    </span><span
+                        class="pointer-events-none absolute left-1/2 top-1/2 size-0.5 rotate-[215deg] animate-meteor rounded-full bg-slate-500 shadow-[0_0_0_1px_#ffffff10]"
+                        style="top: -5px; left: 1357px; animation-delay: 0.474643s; animation-duration: 4s;">
+                        <div
+                            class="pointer-events-none absolute top-1/2 -z-10 h-px w-[50px] -translate-y-1/2 bg-gradient-to-r from-slate-500 to-transparent">
+                        </div>
+                    </span>
+                    <span
+                        class="pointer-events-none absolute left-1/2 top-1/2 size-0.5 rotate-[215deg] animate-meteor rounded-full bg-slate-500 shadow-[0_0_0_1px_#ffffff10]"
+                        style="top: -5px; left: 214px; animation-delay: 0.283678s; animation-duration: 5s;">
+                        <div
+                            class="pointer-events-none absolute top-1/2 -z-10 h-px w-[50px] -translate-y-1/2 bg-gradient-to-r from-slate-500 to-transparent">
+                        </div>
+                    </span><span
+                        class="pointer-events-none absolute left-1/2 top-1/2 size-0.5 rotate-[215deg] animate-meteor rounded-full bg-slate-500 shadow-[0_0_0_1px_#ffffff10]"
+                        style="top: -5px; left: 1169px; animation-delay: 0.881773s; animation-duration: 5s;">
+                        <div
+                            class="pointer-events-none absolute top-1/2 -z-10 h-px w-[50px] -translate-y-1/2 bg-gradient-to-r from-slate-500 to-transparent">
+                        </div>
+                    </span>
+                    <span
+                        class="pointer-events-none absolute left-1/2 top-1/2 size-0.5 rotate-[215deg] animate-meteor rounded-full bg-slate-500 shadow-[0_0_0_1px_#ffffff10]"
+                        style="top: -5px; left: 928px; animation-delay: 0.797223s; animation-duration: 7s;">
+                        <div
+                            class="pointer-events-none absolute top-1/2 -z-10 h-px w-[50px] -translate-y-1/2 bg-gradient-to-r from-slate-500 to-transparent">
+                        </div>
+                    </span><span
+                        class="pointer-events-none absolute left-1/2 top-1/2 size-0.5 rotate-[215deg] animate-meteor rounded-full bg-slate-500 shadow-[0_0_0_1px_#ffffff10]"
+                        style="top: -5px; left: 500px; animation-delay: 0.259529s; animation-duration: 4s;">
+                        <div
+                            class="pointer-events-none absolute top-1/2 -z-10 h-px w-[50px] -translate-y-1/2 bg-gradient-to-r from-slate-500 to-transparent">
+                        </div>
+                    </span>
+                    <span
+                        class="pointer-events-none absolute left-1/2 top-1/2 size-0.5 rotate-[215deg] animate-meteor rounded-full bg-slate-500 shadow-[0_0_0_1px_#ffffff10]"
+                        style="top: -5px; left: 452px; animation-delay: 0.245879s; animation-duration: 5s;">
+                        <div
+                            class="pointer-events-none absolute top-1/2 -z-10 h-px w-[50px] -translate-y-1/2 bg-gradient-to-r from-slate-500 to-transparent">
+                        </div>
+                    </span>
+                </div>
+                <!--  -->
+
+                <div
+                    class="container mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10 py-12 lg:py-0 px-4 sm:px-6">
+                    <div class="w-full lg:w-1/2 mb-12 lg:mb-0 animate__animated animate__fadeInLeft relative">
+                        <!-- Existing content -->
+                        <div
+                            class="absolute hidden lg:-top-20 lg:-left-20 lg:block w-48 h-48 lg:w-64 lg:h-64 bg-blue-500/10 rounded-full blur-3xl">
+                        </div>
+                        <div
+                            class="absolute hidden lg:block lg:top-40 lg:-right-20 w-48 h-48 lg:w-64 lg:h-64 bg-teal-500/10 rounded-full blur-3xl">
+                        </div>
+                        <div
+                            class="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 mb-6 sm:mb-8 animate__animated animate__fadeInDown animate__delay-1s">
+                            <div class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
+                            <span class="text-gray-300 text-xs sm:text-sm font-medium">Welcome to my universe</span>
+                        </div>
+                        <div class="relative mb-6 sm:mb-8">
+                            <h1 class="font-display2 text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
+                                <div class="text-6xl font-bold">
+                                    <strong>Hello</strong>
+                                </div>
+                                <span class="relative inline-block">I'm <span class="gradient-text">Ashish
+                                    </span></span>
+                            </h1>
+                            <div
+                                class="absolute -z-10 top-1/2 -translate-y-1/2 left-1/4 w-24 sm:w-32 h-24 sm:h-32 bg-blue-500/20 rounded-full blur-2xl animate-pulse">
+                            </div>
+                        </div>
+                        <div
+                            class="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 mb-6 sm:mb-8 backdrop-blur-sm animate__animated animate__fadeInUp animate__delay-1s">
+                            <i class="fas fa-rocket text-blue-400 animate-bounce text-sm sm:text-base"></i>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="relative mb-8 sm:mb-12 max-w-xl">
+                            <p class="text-base sm:text-xl text-gray-300/90 leading-relaxed">Web design newbie 🌱 |
+                                UI/UX explorer ✨ | Learning, designing, and shaping the web step by step 💻🚀</p>
+                        </div>
+                        <div
+                            class="flex flex-col sm:flex-row gap-4 sm:gap-6 animate__animated animate__fadeInUp animate__delay-2s">
+                            <a href="https://github.com/codezenashish"
+                                class="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-teal-400 p-0.5 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]">
+                                <span
+                                    class="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-teal-400">
+                                    <span
+                                        class="relative flex items-center justify-center gap-2 text-white font-medium">
+                                        <span>Learn More</span>
+                                        <i
+                                            class="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1"></i>
+                                    </span>
+                                </span>
+                            </a>
+                            <a href="/pages/resume.html"
+                                class="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-gradient-to-r from-gray-800 to-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]">
+                                <span
+                                    class="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
+                                    <span
+                                        class="relative flex items-center justify-center gap-2 text-gray-300 font-medium group-hover:text-white">
+                                        <span>Get Resume</span>
+                                        <i
+                                            class="fas fa-envelope transform transition-all duration-300 group-hover:rotate-12"></i>
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="hidden lg:block absolute left-[5.5rem] top-[2.3rem] animate-float-slow">
+                            <div
+                                class="px-4 py-2 rounded-lg bg-purple-500/10 backdrop-blur-sm border border-purple-500/20 text-purple-400 animate-bounce">
+                                <i class="fas fa-wand-magic-sparkles"></i>&nbsp;&nbsp;UI Magic
+                            </div>
+                        </div>
+                        <div class="hidden lg:block absolute right-10 top-20 animate-float">
+                            <div
+                                class="px-4 py-2 rounded-lg bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 text-blue-400 animate-bounce">
+                                <i class="fas fa-code"></i>&nbsp;&nbsp;Clean Code
+                            </div>
+                        </div>
+                        <div
+                            class="hidden lg:block absolute top-[17rem] left-[70%] transform -translate-x-1/2 animate-float">
+                            <div
+                                class="px-4 py-2 rounded-lg bg-amber-500/10 backdrop-blur-sm border border-amber-500/20 text-amber-400 animate-bounce">
+                                <i class="fas fa-lightbulb"></i>&nbsp;&nbsp;Innovation
+                            </div>
+                        </div>
+                    </div>
+        </main>
+
+        <!-- video -->
+        <div
+            class="bg-gradient-to-b relative flex items-center justify-center h-screen w-screen from-midnightpurple to-black  rounded-md md:p-20 font-[gilroy]">
+            <div class="rounded-2xl relative h-full w-full md:max-w-4xl flex items-center justify-center">
+                <div
+                    class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-midnightpurple md:from-black/5 via-black/30 to-black">
+                </div>
+                <video src="/assets/video/krishna.mp4" class="h-full w-full rounded-md object-cover" autoplay="" loop=""
+                    muted=""></video>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%]">
+                    <p class="flex flex-col text-center items-center text-2xl"><span>Karmanye vadhikaraste ma phaleshu
+                            kadachana,</span><span>Ma karma phala hetur bhur ma te sango’stvakarmani.</span></p>
+                    <p class="text-center text-xs opacity-60">You have a right to perform your duties, but you are not
+                        entitled to the fruits of your actions. Do not let the fruits of action be your motive, nor let
+                        your attachment be to inaction</p>
+                    <p class="w-full text-end opacity-50">- Bhagavad Gita 2.47</p>
+                </div>
+            </div>
+        </div>
+        <!-- video -->
+
+        <section
+            class="about-section bg-gradient-to-b from-[#020617] via-[#0a0f1f] to-[#000D1A]/90 text-white py-16 flex items-center justify-center">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 justify-center">
+                <div class="content max-w-2xl">
+                    <h2 class="text-[#4ECCA3] text-2xl font-bold mb-6">WHO I AM?</h2>
+                    <p class="text-lg leading-relaxed">Hi, I'm Ashish Chaudhary, a web developer and UI/UX
+                        designer in the making. I'm currently a student, diving deep into the world of
+                        coding, design, and technology — the things that truly excite me. I love crafting
+                        websites that look great and feel intuitive, blending creativity with functionality.
+                        Beyond that, I'm a tech enthusiast at heart — whether it's experimenting with code,
+                        gaming, or keeping up with the eSports scene, I'm always immersed in the digital
+                        world. This portfolio is my space to showcase my skills, my passion, and the
+                        projects I've built from scratch. Take a look and see what I'm all about!".</p>
+                </div>
+                <div class="image-container"><img src="/assets/img/About img.png" alt="Profile"
+                        class="w-72 h-72 rounded-lg object-cover shadow-lg"></div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

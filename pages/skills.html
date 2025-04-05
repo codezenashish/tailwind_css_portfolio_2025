@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/src/assets/favicon.ico">
+    <link rel="stylesheet" href="/src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body class=text-white font-display ">
+    <div id=" root">
+    <header
+        class="fixed top-0 left-0 w-full z-50 bg-gray-900/95 backdrop-blur-md md:bg-transparent md:backdrop-blur-none">
+        <div class="md:fixed md:top-4 md:left-1/2 md:transform md:-translate-x-1/2 w-full md:w-auto">
+            <div
+                class="p-[2px] md:rounded-full bg-gradient-to-r from-emerald-400 via-cyan-500 to-indigo-500 animate-gradient-x">
+                <nav class="bg-gray-900/90 backdrop-blur-md md:rounded-full px-4 md:px-6 py-2.5">
+                    <div class="flex justify-between items-center md:hidden px-2"><a class="text-white font-bold"
+                            href="/" data-discover="true">Portfolio</a>
+                        <button id="menuButton" class="text-white p-2">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="mainMenu" class="hidden md:block">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-1 lg:gap-2 py-4 md:py-0">
+                            <a class="nav-item px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium
+                          transition-all duration-300 flex items-center gap-2
+                          hover:bg-white/10 
+                          bg-white/15 text-white
+                         " href="/" data-discover="true">
+                                <i class="fa-solid fa-house text-xs"></i> <span class="inline">Home</span></a>
+
+                            <a class="nav-item px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium
+                          transition-all duration-300 flex items-center gap-2
+                          hover:bg-white/10 
+                          text-gray-300 hover:text-white
+                        " href="/pages/skills.html" data-discover="true">
+                                <i class="fa-solid fa-code text-xs"></i><span class="inline">Skills</span></a>
+
+                            <a class="nav-item px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium
+                          transition-all duration-300 flex items-center gap-2
+                          hover:bg-white/10 
+                          text-gray-300 hover:text-white
+                        " href="/pages/about.html" data-discover="true">
+                                <i class="fa-solid fa-address-card text-xs"></i><span class="inline">About</span></a>
+
+
+                            <a class="nav-item px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium
+                          transition-all duration-300 flex items-center gap-2
+                          hover:bg-white/10 
+                          text-gray-300 hover:text-white
+                        " href="/projects" data-discover="true">
+                                <i class="fa-solid fa-laptop-code text-xs"></i><span class="inline">Projects</span></a>
+
+                            <a class="nav-item px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium
+                          transition-all duration-300 flex items-center gap-2
+                          hover:bg-white/10 
+                          text-gray-300 hover:text-white
+                        " href="/contact" data-discover="true">
+                                <i class="fa-solid fa-envelope text-xs"></i><span class="inline">Contact</span></a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <style>
+            @keyframes gradient-x {
+
+                0%,
+                100% {
+                    background-position: 0% 50%;
+                }
+
+                50% {
+                    background-position: 100% 50%;
+                }
+            }
+
+            .animate-gradient-x {
+                animation: gradient-x 3s linear infinite;
+                background-size: 200% 200%;
+            }
+        </style>
+    </header>
+    <!--  -->
+
+
+
+
+    <section class="pt-20  min-h-screen  bg-gradient-to-b from-[#020617] via-[#0a0f1f] to-[#000D1A]/90 ">
+        <div class="container mx-auto py-12 lg:py-0 px-4 sm:px-6">
+            <div class=" mx-auto">
+                <!-- Header -->
+                <div class="mb-12">
+                    <div class="flex items-center gap-2 text-sm mb-4">
+                        <div class="w-4 h-[2px] bg-blue-500 animate-pulse"></div>
+                        <span class="text-gray-400">Skills.</span>
+                    </div>
+
+                    <h1 class="sm:text-3xl md:text-5xl font-light mb-4 leading-tight">
+                        Lorem, ipsum dolor.<br>
+                        Lorem ipsum dolor sit amet.-<br>
+                        <span class="text-blue-500">@codezenashish</span>
+                    </h1>
+
+                    <p class="text-gray-400 max-w-md">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+                        <span class="text-blue-500">Lorem ipsum dolor sit amet.</span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+                    </p>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="relative">
+                    <!-- Background Number -->
+                    <div class="absolute right-0 top-2.5 text-9xl font-bold text-gray-700/20 select-none">
+                        Skills
+                    </div>
+
+                    <!-- Stats Container -->
+                    <div class="flex items-center gap-2 text-sm mb-4">
+                        <div class="w-4 h-[2px] bg-blue-500"></div>
+                        <span class="text-gray-400">Frontend Forge.</span>
+                    </div>
+
+                    <div class=" ">
+                        <div class="grid grid-cols-2 gap-6 max-w-lg">
+                            <div class="space-y-6">
+                                <div
+                                    class="bg-orange-500/10 border border-orange-900 rounded-xl p-4 text-white shadow-lg backdrop-blur-sm">
+                                    <div class=" flex gap-1 text-2xl  font-bold"> 90%</div>
+                                    <div class="text-sm opacity-80">Html</div>
+                                </div>
+                                <div
+                                    class="bg-blue-500/10 border border-blue-500 rounded-xl p-4 text-white shadow-lg backdrop-blur-sm">
+                                    <div class="text-2xl font-bold"><i class="fa-brands fa-css3"></i> 85%</div>
+                                    <div class="text-sm opacity-80">CSS</div>
+                                </div>
+                                <div
+                                    class="bg-sky-400/10 border border-sky-400 rounded-xl p-4 text-white shadow-lg backdrop-blur-sm">
+                                    <div class="text-2xl font-bold"><i class="fa-brands fa-react"></i> 80%</div>
+                                    <div class="text-sm opacity-80">React</div>
+                                </div>
+
+                            </div>
+                            <div class="space-y-6 pt-12">
+                                <div
+                                    class="bg-yellow-500/10 border border-yellow-700 rounded-xl p-4 text-white shadow-lg backdrop-blur-sm">
+                                    <div class="text-2xl font-bold"><i class="fa-brands fa-js"></i> 20%</div>
+                                    <div class="text-sm opacity-80">Java Script</div>
+                                </div>
+                                <div
+                                    class="bg-cyan-500/10 border border-cyan-700 rounded-xl p-4 text-white shadow-lg backdrop-blur-sm">
+                                    <div class="text-2xl font-bold"><i class="fa-brands fa-css3-alt"></i> 88%</div>
+                                    <div class="text-sm opacity-80">Tailwind CSS</div>
+                                </div>
+                                <div
+                                    class="bg-purple-500/10 border border-purple-800 rounded-xl p-4 text-white shadow-lg backdrop-blur-sm ">
+                                    <div class="text-2xl font-bold">88%</div>
+                                    <div class="text-sm opacity-80">Tailwind CSS</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-center">
+                            <h1>honey</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+
+
+
+    <!--  -->
+    </div>
+</body>
+<script src="/js/script.js"></script>
+
+</html>
